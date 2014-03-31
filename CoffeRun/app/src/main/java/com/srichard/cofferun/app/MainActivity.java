@@ -104,11 +104,7 @@ public class MainActivity extends ActionBarActivity {
         }
     }
 
-    /**
-     * A placeholder fragment containing a simple view.
-     */
-
-    public static class OrderListFragment extends ListFragment {
+     public static class OrderListFragment extends ListFragment {
         String[] list_items;
 
         private static final String ARG_SECTION_NUMBER = "section_number";
@@ -156,11 +152,9 @@ public class MainActivity extends ActionBarActivity {
         }
 
         @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_main, container, false);
-            TextView textView = (TextView) rootView.findViewById(R.id.section_label);
-            textView.setText("Coffee List");
+        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+            View rootView;
+            rootView = inflater.inflate(R.layout.add_coffee_fragment, container, false);
 
             return rootView;
         }

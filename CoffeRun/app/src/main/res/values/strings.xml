@@ -11,4 +11,21 @@
     <string name="title_section2">Add Drink</string>
     <string name="action_settings">Settings</string>
 
+    <string name="xlarge_coffee">XL</string>
+    <string name="large_coffee">L</string>
+    <string name="medium_coffee">M</string>
+    <string name="small_coffee">S</string>
+    <string name="single_single">1 x 1</string>
+    <string name="double_double">2 x 2</string>
+    <string name="triple_triple">3 x 3</string>
+    <string name="sugar_select">Sugar</string>
+    <string name="cream_select">Cream</string>
+    <string name="milk_select">Milk</string>
+    <string name="text_view">X</string>
+    <string name="add_drink">Add</string>
+    <string name="add_small">Small</string>
+    <string name="add_medium">Medium</string>
+    <string name="add_large">Large</string>
+    <string name="add_xlarge">Extra Large</string>
+
 </resources>
