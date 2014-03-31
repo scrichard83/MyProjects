@@ -4,10 +4,10 @@
     android:layout_height="fill_parent"
     android:layout_gravity="center"
     android:orientation="vertical"
-    android:gravity="center"
-    android:background="@android:color/background_dark">
+    android:background="@android:color/transparent"
+    android:gravity="center">
 
-    <LinearLayout
+    <!--<LinearLayout
         android:layout_width="160dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -36,9 +36,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/xlarge_coffee" />
-    </LinearLayout>
+    </LinearLayout>-->
 
-    <RadioGroup
+   <!-- <RadioGroup
         android:id="@+id/radiogroup1"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
@@ -69,7 +69,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:id="@+id/radioXlarge" />
-    </RadioGroup>
+    </RadioGroup>-->
 
 
     <LinearLayout

@@ -10,7 +10,6 @@
     <string name="title_section1">My Order</string>
     <string name="title_section2">Add Drink</string>
     <string name="action_settings">Settings</string>
-
     <string name="xlarge_coffee">XL</string>
     <string name="large_coffee">L</string>
     <string name="medium_coffee">M</string>
@@ -27,5 +26,6 @@
     <string name="add_medium">Medium</string>
     <string name="add_large">Large</string>
     <string name="add_xlarge">Extra Large</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

@@ -4,20 +4,15 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.app.ListFragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.TextView;
 
 import java.util.Locale;
 
 public class MainActivity extends ActionBarActivity {
+
 
     SectionsPagerAdapter mSectionsPagerAdapter;
     /**
@@ -37,6 +32,7 @@ public class MainActivity extends ActionBarActivity {
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.pager);
         mViewPager.setAdapter(mSectionsPagerAdapter);
+
     }
 
     @Override
@@ -53,10 +49,7 @@ public class MainActivity extends ActionBarActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
+        return id == R.id.action_settings || super.onOptionsItemSelected(item);
     }
 
     /**
@@ -101,62 +94,6 @@ public class MainActivity extends ActionBarActivity {
                     return getString(R.string.title_section2).toUpperCase(l);
                            }
             return null;
-        }
-    }
-
-     public static class OrderListFragment extends ListFragment {
-        String[] list_items;
-
-        private static final String ARG_SECTION_NUMBER = "section_number";
-
-        public static OrderListFragment newInstance(int sectionNumber) {
-            OrderListFragment fragment = new OrderListFragment();
-            Bundle args = new Bundle();
-            args.putInt(ARG_SECTION_NUMBER, sectionNumber);
-            fragment.setArguments(args);
-            return fragment;
-        }
-
-        public OrderListFragment() {
-        }
-
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.order_list_fragment, container, false);
-            list_items = getResources().getStringArray(R.array.list_array);
-            setListAdapter(new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, list_items));
-            return rootView;
-        }
-    }
-
-    public static class AddCoffeeFragment extends Fragment {
-        /**
-         * The fragment argument representing the section number for this
-         * fragment.
-         */
-        private static final String ARG_SECTION_NUMBER = "section_number";
-        /**
-         * Returns a new instance of this fragment for the given section
-         * number.
-         */
-        public static AddCoffeeFragment newInstance(int sectionNumber) {
-            AddCoffeeFragment fragment = new AddCoffeeFragment();
-            Bundle args = new Bundle();
-            args.putInt(ARG_SECTION_NUMBER, sectionNumber);
-            fragment.setArguments(args);
-            return fragment;
-        }
-
-        public AddCoffeeFragment() {
-        }
-
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-            View rootView;
-            rootView = inflater.inflate(R.layout.add_coffee_fragment, container, false);
-
-            return rootView;
         }
     }
 
